@@ -4,16 +4,37 @@
 //
 //  Created by /Chynmn/M1 pro—̳͟͞͞♡ on 2022/12/01.
 //
-
+import UIKit
 import SwiftUI
 
 struct ContentView: View {
+    @State var id : String = ""
+    @State var pw : String = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("GO X iOS")
+                .font(.largeTitle)
+                .bold()
+            
+            TextField("Enter your ID", text: $id)
+                .padding()
+                .background(Color(uiColor: .secondarySystemBackground))
+            
+            TextField("Enter your PW", text: $pw)
+                .padding()
+                .background(Color(uiColor: .secondarySystemBackground))
+            
+            Button (action: {
+                
+            }) {
+                Text("sign in")
+                    .padding()
+                    .font(.headline)
+                    .background(Capsule().stroke(.blue, lineWidth: 3))
+            }
+            
+            
         }
         .padding()
     }
