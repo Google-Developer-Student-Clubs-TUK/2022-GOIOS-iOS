@@ -28,14 +28,23 @@ struct ContentView: View {
             Button (action: {
                 
             }) {
-                Text("sign in")
+                Text("Sign in")
                     .padding()
                     .font(.headline)
                     .background(Capsule().stroke(.blue, lineWidth: 3))
             }
             
+            Button (action: {
             
+            }) {
+                Text("Sign Up")
+                    .font(.caption)
+                    .underline()
+                    .foregroundColor(.black)
+                    .frame(alignment: .bottomTrailing)
+            }
         }
+        .frame(alignment: .bottomTrailing)
         .padding()
     }
 }
