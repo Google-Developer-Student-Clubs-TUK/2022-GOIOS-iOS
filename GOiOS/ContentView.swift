@@ -7,44 +7,83 @@
 import UIKit
 import SwiftUI
 
-struct ContentView: View {
-    @State var id : String = ""
-    @State var pw : String = ""
+struct ContentView: View {    
+    @State private var id : String = ""
+    @State private var pw : String = ""
+    @State private var showPassword = false
+    
+
     
     var body: some View {
         VStack {
-            Text("GO X iOS")
+            Text("GO X iS")
                 .font(.largeTitle)
                 .bold()
             
-            TextField("Enter your ID", text: $id)
+            VStack {
+                HStack {
+                    Image(systemName: "person")
+                        .foregroundColor(.secondary)
+                    
+                    TextField("Username", text: $id)
+                        .disableAutocorrection(true)
+                }
                 .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-            
-            TextField("Enter your PW", text: $pw)
+                .background(Capsule().fill(.tertiary))
                 .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
+                
+                HStack {
+                    Image(systemName: "lock")
+                        .foregroundColor(.secondary)
+                    
+                    if showPassword {
+                        TextField("Password", text: $pw)
+                    } else {
+                        SecureField("Password", text: $pw)
+                    }
+                    Button(action: {
+                        self.showPassword.toggle()
+                    }, label: {
+                        Image(systemName: "eye")
+                            .foregroundColor(.secondary)
+                    })
+                    
+                }
+                .padding()
+                .background(Capsule().fill(.tertiary))
+                .padding()
+            }
             
             Button (action: {
                 
             }) {
-                Text("Sign in")
-                    .padding()
-                    .font(.headline)
-                    .background(Capsule().stroke(.blue, lineWidth: 3))
+                HStack {
+                    Text("Sign in")
+                        .padding()
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    
+                    Image(systemName: "arrow.right.circle")
+                        .foregroundColor(.white)
+                }
+                .frame(width: 200, height: 45)
+                .background(Capsule().fill(.black))
+                
             }
+            .padding()
             
-            Button (action: {
-            
-            }) {
-                Text("Sign Up")
-                    .font(.caption)
-                    .underline()
-                    .foregroundColor(.black)
-                    .frame(alignment: .bottomTrailing)
+            HStack(alignment: .lastTextBaseline) {
+                Button (action: {
+                
+                }) {
+                    Text("Sign Up")
+                        .font(.caption)
+                        .underline()
+                        .foregroundColor(.black)
+                        
+                }
             }
         }
-        .frame(alignment: .bottomTrailing)
         .padding()
     }
 }
