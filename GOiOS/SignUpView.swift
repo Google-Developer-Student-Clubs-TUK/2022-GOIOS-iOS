@@ -8,9 +8,28 @@ import UIKit
 import SwiftUI
 
 struct SignUpView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var showingAlert = false
+    @State var uiTabarController: UITabBarController?
+
+
     @State private var sign_id : String = ""
     @State private var sign_pw : String = ""
     @State private var sign_pw_check : String = ""
+    
+    var btnBack : some View { Button(action: {
+            self.showingAlert = true
+        }){
+            Text("뒤로가기")
+        }.alert(isPresented: $showingAlert){
+            Alert(title: Text("회원 가입 취소"), message: Text("회원가입을 취소하시겠습니까?"),
+                  primaryButton: .destructive(Text("취소하기"), action: {
+                presentationMode.wrappedValue.dismiss()
+            })
+                  , secondaryButton: .cancel(Text("이어하기")))
+        }
+            
+    }
     
     var body: some View {
         VStack {
