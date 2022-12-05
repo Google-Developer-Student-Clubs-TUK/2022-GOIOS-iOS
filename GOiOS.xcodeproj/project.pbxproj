@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8DACFD02938D7720023AE6E /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DACFCF2938D7720023AE6E /* ScheduleView.swift */; };
+		D8DACFD22938D7C30023AE6E /* ScheduleView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DACFD12938D7C30023AE6E /* ScheduleView.storyboard */; };
 		DE50BB08293885670027AFF2 /* GOiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50BB07293885670027AFF2 /* GOiOSApp.swift */; };
 		DE50BB0A293885670027AFF2 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50BB09293885670027AFF2 /* SignInView.swift */; };
 		DE50BB0C293885680027AFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE50BB0B293885680027AFF2 /* Assets.xcassets */; };
@@ -14,14 +16,10 @@
 		DE50BB19293885680027AFF2 /* GOiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50BB18293885680027AFF2 /* GOiOSTests.swift */; };
 		DE50BB23293885680027AFF2 /* GOiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50BB22293885680027AFF2 /* GOiOSUITests.swift */; };
 		DE50BB25293885680027AFF2 /* GOiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50BB24293885680027AFF2 /* GOiOSUITestsLaunchTests.swift */; };
-<<<<<<< Updated upstream
-=======
+
 		DEB3DBEB2938EA7000526413 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB3DBEA2938EA7000526413 /* SignUpView.swift */; };
 		DEC22931293DC69B003FA188 /* ScheduleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC22930293DC69B003FA188 /* ScheduleListView.swift */; };
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+    
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8DACFCF2938D7720023AE6E /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		D8DACFD12938D7C30023AE6E /* ScheduleView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleView.storyboard; sourceTree = "<group>"; };
 		DE50BB04293885670027AFF2 /* GOiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE50BB07293885670027AFF2 /* GOiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOiOSApp.swift; sourceTree = "<group>"; };
 		DE50BB09293885670027AFF2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -52,14 +52,9 @@
 		DE50BB1E293885680027AFF2 /* GOiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE50BB22293885680027AFF2 /* GOiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOiOSUITests.swift; sourceTree = "<group>"; };
 		DE50BB24293885680027AFF2 /* GOiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
-=======
 		DEB3DBEA2938EA7000526413 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DEC22930293DC69B003FA188 /* ScheduleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListView.swift; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,21 +106,13 @@
 			isa = PBXGroup;
 			children = (
 				DE50BB07293885670027AFF2 /* GOiOSApp.swift */,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-				DE50BB09293885670027AFF2 /* ContentView.swift */,
-=======
 				DE50BB09293885670027AFF2 /* SignInView.swift */,
 				DEB3DBEA2938EA7000526413 /* SignUpView.swift */,
 				DEC22930293DC69B003FA188 /* ScheduleListView.swift */,
->>>>>>> Stashed changes
-=======
-				DE50BB09293885670027AFF2 /* SignInView.swift */,
-				DEB3DBEA2938EA7000526413 /* SignUpView.swift */,
-				DEC22930293DC69B003FA188 /* ScheduleListView.swift */,
->>>>>>> Stashed changes
 				DE50BB0B293885680027AFF2 /* Assets.xcassets */,
 				DE50BB0D293885680027AFF2 /* Preview Content */,
+				D8DACFCF2938D7720023AE6E /* ScheduleView.swift */,
+				D8DACFD12938D7C30023AE6E /* ScheduleView.storyboard */,
 			);
 			path = GOiOS;
 			sourceTree = "<group>";
@@ -259,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8DACFD22938D7C30023AE6E /* ScheduleView.storyboard in Resources */,
 				DE50BB0F293885680027AFF2 /* Preview Assets.xcassets in Resources */,
 				DE50BB0C293885680027AFF2 /* Assets.xcassets in Resources */,
 			);
@@ -285,20 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-				DE50BB0A293885670027AFF2 /* ContentView.swift in Sources */,
-=======
 				DEC22931293DC69B003FA188 /* ScheduleListView.swift in Sources */,
 				DEB3DBEB2938EA7000526413 /* SignUpView.swift in Sources */,
 				DE50BB0A293885670027AFF2 /* SignInView.swift in Sources */,
->>>>>>> Stashed changes
-=======
-				DEC22931293DC69B003FA188 /* ScheduleListView.swift in Sources */,
-				DEB3DBEB2938EA7000526413 /* SignUpView.swift in Sources */,
-				DE50BB0A293885670027AFF2 /* SignInView.swift in Sources */,
->>>>>>> Stashed changes
 				DE50BB08293885670027AFF2 /* GOiOSApp.swift in Sources */,
+				D8DACFD02938D7720023AE6E /* ScheduleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
