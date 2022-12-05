@@ -18,6 +18,9 @@
 =======
 		DEB3DBEB2938EA7000526413 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB3DBEA2938EA7000526413 /* SignUpView.swift */; };
 		DEC22931293DC69B003FA188 /* ScheduleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC22930293DC69B003FA188 /* ScheduleListView.swift */; };
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 /* End PBXBuildFile section */
 
@@ -53,6 +56,9 @@
 =======
 		DEB3DBEA2938EA7000526413 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		DEC22930293DC69B003FA188 /* ScheduleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListView.swift; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 /* End PBXFileReference section */
 
@@ -106,7 +112,13 @@
 			children = (
 				DE50BB07293885670027AFF2 /* GOiOSApp.swift */,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				DE50BB09293885670027AFF2 /* ContentView.swift */,
+=======
+				DE50BB09293885670027AFF2 /* SignInView.swift */,
+				DEB3DBEA2938EA7000526413 /* SignUpView.swift */,
+				DEC22930293DC69B003FA188 /* ScheduleListView.swift */,
+>>>>>>> Stashed changes
 =======
 				DE50BB09293885670027AFF2 /* SignInView.swift */,
 				DEB3DBEA2938EA7000526413 /* SignUpView.swift */,
@@ -274,7 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				DE50BB0A293885670027AFF2 /* ContentView.swift in Sources */,
+=======
+				DEC22931293DC69B003FA188 /* ScheduleListView.swift in Sources */,
+				DEB3DBEB2938EA7000526413 /* SignUpView.swift in Sources */,
+				DE50BB0A293885670027AFF2 /* SignInView.swift in Sources */,
+>>>>>>> Stashed changes
 =======
 				DEC22931293DC69B003FA188 /* ScheduleListView.swift in Sources */,
 				DEB3DBEB2938EA7000526413 /* SignUpView.swift in Sources */,
