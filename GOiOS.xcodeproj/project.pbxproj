@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE50BB08293885670027AFF2 /* GOiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50BB07293885670027AFF2 /* GOiOSApp.swift */; };
-		DE50BB0A293885670027AFF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50BB09293885670027AFF2 /* ContentView.swift */; };
+		DE50BB0A293885670027AFF2 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50BB09293885670027AFF2 /* ScheduleView.swift */; };
 		DE50BB0C293885680027AFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE50BB0B293885680027AFF2 /* Assets.xcassets */; };
 		DE50BB0F293885680027AFF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE50BB0E293885680027AFF2 /* Preview Assets.xcassets */; };
 		DE50BB19293885680027AFF2 /* GOiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50BB18293885680027AFF2 /* GOiOSTests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		DE50BB04293885670027AFF2 /* GOiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE50BB07293885670027AFF2 /* GOiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOiOSApp.swift; sourceTree = "<group>"; };
-		DE50BB09293885670027AFF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DE50BB09293885670027AFF2 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		DE50BB0B293885680027AFF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE50BB0E293885680027AFF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE50BB14293885680027AFF2 /* GOiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				DE50BB07293885670027AFF2 /* GOiOSApp.swift */,
-				DE50BB09293885670027AFF2 /* ContentView.swift */,
+				DE50BB09293885670027AFF2 /* ScheduleView.swift */,
 				DE50BB0B293885680027AFF2 /* Assets.xcassets */,
 				DE50BB0D293885680027AFF2 /* Preview Content */,
 			);
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE50BB0A293885670027AFF2 /* ContentView.swift in Sources */,
+				DE50BB0A293885670027AFF2 /* ScheduleView.swift in Sources */,
 				DE50BB08293885670027AFF2 /* GOiOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

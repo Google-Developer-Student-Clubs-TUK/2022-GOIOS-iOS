@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ScheduleView: View {
     let columns: [GridItem] = [
         GridItem(.fixed(40), spacing: 5, alignment: nil),
         GridItem(.fixed(40), spacing: 5, alignment: nil),
@@ -86,8 +86,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ScheduleView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ScheduleView()
     }
 }
