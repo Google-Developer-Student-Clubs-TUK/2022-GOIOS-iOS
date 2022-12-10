@@ -11,7 +11,7 @@ import SwiftUI
 struct GOiOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ScheduleView()
+            ScheduleUIView()
         }
     }
 }

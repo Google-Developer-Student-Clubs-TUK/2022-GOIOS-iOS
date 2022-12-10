@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  ScheduleUIView.swift
 //  GOiOS
 //
-//  Created by /Chynmn/M1 pro—̳͟͞͞♡ on 2022/12/01.
+//  Created by /Chynmn/M1 pro—̳͟͞͞♡ on 2022/12/11.
 //
 
 import SwiftUI
 
-struct ScheduleView: View {
+struct ScheduleUIView: View {
     let columns: [GridItem] = [
         GridItem(.fixed(40), spacing: 5, alignment: nil),
         GridItem(.fixed(40), spacing: 5, alignment: nil),
@@ -86,8 +86,9 @@ struct ScheduleView: View {
     }
 }
 
-struct ScheduleView_Previews: PreviewProvider {
+struct ScheduleUIView_Previews: PreviewProvider {
     static var previews: some View {
-        ScheduleView()
+        ScheduleUIView()
     }
 }
+
