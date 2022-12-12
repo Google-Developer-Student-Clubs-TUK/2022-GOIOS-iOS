@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    let columns: [GridItem] = [
+    @State private var shouldBeRed: Bool = true
+    @State private var array: [Bool] = Array(repeating: false, count: 105)
+    
+    
+    var columns: [GridItem] = [
         GridItem(.fixed(40), spacing: 5, alignment: nil),
         GridItem(.fixed(40), spacing: 5, alignment: nil),
         GridItem(.fixed(40), spacing: 5, alignment: nil),
@@ -20,19 +24,24 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
+            Text("Group Code")
+                .font(.title)
+            Spacer()
             HStack {
                 Text("Unavailable")
                 Rectangle()
-                      .fill(Color.red)
+                    .fill(Color(UIColor.lightGray))
                       .frame(width: 40, height: 40)
-                
+                      .border(Color.black, width: 1)
                 Spacer()
                 Text("available")
                 Rectangle()
-                      .fill(Color.blue)
+                      .fill(Color.green)
                       .frame(width: 40, height: 40)
+                      .border(Color.black, width: 1)
             }
             .font(.title3)
+            Spacer()
             Spacer()
             HStack(alignment: .center, spacing:13){
                 Text("Mon")
@@ -44,7 +53,8 @@ struct ContentView: View {
                 Text("Sun")
             }
             .font(.title3)
-            .padding(.leading,50)
+            .padding(.leading,35)
+            
             HStack{
                 VStack(alignment: .center, spacing:25){
                     Group{
@@ -71,11 +81,17 @@ struct ContentView: View {
                 LazyVGrid(columns: columns,spacing: 0) {
                     ForEach(0..<105) { index in
                         Rectangle()
-                            .fill(Color.white)
+                            
                             .frame(height: 37)
                             .border(Color.black, width: 1)
+                            .if(array[index]){view in
+                                view.foregroundColor(.green)
+                            }
+                            .foregroundColor(Color(UIColor.lightGray))
+                            .onTapGesture {
+                                self.array[index] = !self.array[index]
+                            }
                     }
-                    
                 }
             }
             
@@ -86,8 +102,20 @@ struct ContentView: View {
     }
 }
 
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension View {
+    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
     }
 }
