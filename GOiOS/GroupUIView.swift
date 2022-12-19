@@ -1,16 +1,16 @@
 //
-//  ContentView.swift
+//  GroupUIView.swift
 //  GOiOS
 //
-//  Created by /Chynmn/M1 pro—̳͟͞͞♡ on 2022/12/01.
+//  Created by 강기환 on 2022/12/19.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var shouldBeRed: Bool = true
-    @State private var array: [Bool] = Array(repeating: false, count: 105)
-    
+struct GroupUIView: View {
+    //@State private var array: [Int] = Array(repeating: 0, count: 105)
+    private var tot: [Int] = [0, 1, 2, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 2, 4, 0, 0, 0, 0, 0, 2, 4, 0, 0, 0, 0, 0, 4, 1, 0, 0, 0, 0, 0, 4, 1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    private var cnt: Int = 4
     
     var columns: [GridItem] = [
         GridItem(.fixed(40), spacing: 5, alignment: nil),
@@ -28,17 +28,16 @@ struct ContentView: View {
                 .font(.title)
             Spacer()
             HStack {
-                Text("Unavailable")
+                Text("0")
                 Rectangle()
                     .fill(Color(UIColor.lightGray))
-                      .frame(width: 40, height: 40)
                       .border(Color.black, width: 1)
-                Spacer()
-                Text("available")
-                Rectangle()
-                      .fill(Color.green)
-                      .frame(width: 40, height: 40)
-                      .border(Color.black, width: 1)
+                ForEach(1..<cnt+1){ index in
+                    Text(String(index))
+                    Rectangle()
+                        .foregroundColor(.green).opacity(Double(index)/Double(cnt))
+                        .border(Color.black, width: 1)
+                }
             }
             .font(.title3)
             Spacer()
@@ -81,16 +80,12 @@ struct ContentView: View {
                 LazyVGrid(columns: columns,spacing: 0) {
                     ForEach(0..<105) { index in
                         Rectangle()
-                            
                             .frame(height: 37)
                             .border(Color.black, width: 1)
-                            .if(array[index]){view in
-                                view.foregroundColor(.green)
+                            .if(tot[index]>0){view in
+                                view.foregroundColor(.green).opacity(Double(tot[index])/Double(cnt))
                             }
                             .foregroundColor(Color(UIColor.lightGray))
-                            .onTapGesture {
-                                self.array[index] = !self.array[index]
-                            }
                     }
                 }
             }
@@ -102,20 +97,8 @@ struct ContentView: View {
     }
 }
 
-
-
-struct ContentView_Previews: PreviewProvider {
+struct GroupUIView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-    }
-}
-
-extension View {
-    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
-        if condition {
-            transform(self)
-        } else {
-            self
-        }
+        GroupUIView()
     }
 }
