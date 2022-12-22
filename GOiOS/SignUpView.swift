@@ -17,19 +17,19 @@ struct SignUpView: View {
     @State private var sign_pw : String = ""
     @State private var sign_pw_check : String = ""
     
-    var btnBack : some View { Button(action: {
-            self.showingAlert = true
-        }){
-            Text("뒤로가기")
-        }.alert(isPresented: $showingAlert){
-            Alert(title: Text("회원 가입 취소"), message: Text("회원가입을 취소하시겠습니까?"),
-                  primaryButton: .destructive(Text("취소하기"), action: {
-                presentationMode.wrappedValue.dismiss()
-            })
-                  , secondaryButton: .cancel(Text("이어하기")))
-        }
-            
-    }
+//    var btnBack : some View { Button(action: {
+//            self.showingAlert = true
+//        }){
+//            Text("뒤로가기")
+//        }.alert(isPresented: $showingAlert){
+//            Alert(title: Text("회원 가입 취소"), message: Text("회원가입을 취소하시겠습니까?"),
+//                  primaryButton: .destructive(Text("취소하기"), action: {
+//                presentationMode.wrappedValue.dismiss()
+//            })
+//                  , secondaryButton: .cancel(Text("이어하기")))
+//        }
+//
+//    }
     
     var body: some View {
         VStack {
@@ -68,7 +68,15 @@ struct SignUpView: View {
             }
             
             Button (action: {
+                print(self.sign_id + self.sign_pw)
                 
+                sendPostRequest("http://localhost:8000/auth/signup", parameters: ["ID": self.sign_id, "PW": self.sign_pw]){
+                    responseObject, error in guard let _ = responseObject, error == nil else {
+                        print(error ?? "Unkown error")
+                        return
+                    }
+                }
+                self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Sign Up")
                     .padding()
