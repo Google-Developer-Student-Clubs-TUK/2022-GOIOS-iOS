@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 func sendPostRequest(_ url: String, parameters: [String: String], completion: @escaping ([String: Any]?, Error?) -> Void) {
     let targetUrl = URL(string: url)
     let paramData = try? JSONSerialization.data(withJSONObject: parameters)

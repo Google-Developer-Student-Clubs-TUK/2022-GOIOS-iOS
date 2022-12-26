@@ -6,6 +6,7 @@
 //
 import UIKit
 import SwiftUI
+import Alamofire
 
 struct SignUpView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -46,7 +47,7 @@ struct SignUpView: View {
                     Image(systemName: "person")
                         .foregroundColor(.secondary)
                     
-                    TextField("Please enter your ID", text: $sign_id)
+                    TextField("Please enter your ID", text: $sign_id).keyboardType(.default).autocapitalization(.none)
                         .disableAutocorrection(true)
                 }
                 .padding()
@@ -57,7 +58,7 @@ struct SignUpView: View {
                     HStack {
                         Image(systemName: "lock")
                             .foregroundColor(.secondary)
-                        SecureField("Please enter your PW", text: $sign_pw)
+                        SecureField("Please enter your PW", text: $sign_pw).keyboardType(.default)
                     }
                     .padding()
                     .background(Capsule().fill(.tertiary))
