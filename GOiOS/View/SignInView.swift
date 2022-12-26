@@ -6,6 +6,7 @@
 //
 import UIKit
 import SwiftUI
+import Alamofire
 
 struct SignInView: View {
     @State private var id : String = ""
@@ -15,6 +16,8 @@ struct SignInView: View {
 //    @State private var showingAlert: Bool = false
 //    @State private var correctId: String = ""
 //    @State private var correctPw: String = ""
+    @State private var loginStatus: Bool = false    // TODO env 변수로 선언 후 토큰 계속 확인
+    @State private var userAccessToken: String = ""
     
     
     var body: some View {
@@ -60,7 +63,27 @@ struct SignInView: View {
                 }
                 
                 Button (action: {
-                    
+//                    print(self.id + self.pw)
+//
+//                    let rft = readItemKeyChain(userId: self.id)
+//                    if rft != nil {
+//                        UserDefaults.standard.set(rft, forKey: self.id)
+//                    }else{
+//                        sendPostRequest("<http://localhost:8080/api/v1/user>", parameters: ["username": self.id, "password": self.pw]){
+//                            responseObject, error in guard let _ = responseObject, error == nil else {
+//                                print(error ?? "Unknown error")
+//                                return
+//                            }
+//                            self.loginStatus = true
+//
+//                            if let rftToken = responseObject{
+//                                let rft = rftToken["refresh"] as? String
+//                                self.userAccessToken = rftToken["access"] as? String ?? ""
+//                                setItemKeyChain(userId: self.email, rft: rft!)
+//                                UserDefaults.standard.set(rft, forKey: self.email)
+//                            }
+//                        }
+//                    }
                 }) {
                     HStack {
                         Text("Sign in")
@@ -77,16 +100,16 @@ struct SignInView: View {
                 }
                 
 //                NavigationLink(destination: SignUpView()) {
-                    Button (action: {
-                        
-                    }) {
+//                    Button (action: {
+//
+//                    }) {
                     NavigationLink(destination: SignUpView()) {
                         Text("Sign Up")
                             .font(.caption)
                             .underline()
                             .foregroundColor(.black)
                             .navigationTitle("")
-                    }
+//                    }
                 }
                 .frame(width: 300, height: 50)
             }
