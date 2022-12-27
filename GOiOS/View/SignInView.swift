@@ -85,18 +85,19 @@ struct SignInView: View {
 //                        }
 //                    }
                 }) {
-                    HStack {
-                        Text("Sign in")
-                            .padding()
-                            .font(.headline)
-                            .foregroundColor(.white)
-                        
-                        Image(systemName: "arrow.right.circle")
-                            .foregroundColor(.white)
+                    NavigationLink(destination: GroupUIView()){
+                        HStack {
+                            Text("Sign in")
+                                .padding()
+                                .font(.headline)
+                                .foregroundColor(.white)
+                            
+                            Image(systemName: "arrow.right.circle")
+                                .foregroundColor(.white)
+                        }
+                        .frame(width: 200, height: 45)
+                        .background(Capsule().fill(.black))
                     }
-                    .frame(width: 200, height: 45)
-                    .background(Capsule().fill(.black))
-                    
                 }
                 
 //                NavigationLink(destination: SignUpView()) {
