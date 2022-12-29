@@ -1,0 +1,6 @@
+framework module Pods_GOiOS_GOiOSUITests {
+  umbrella header "Pods-GOiOS-GOiOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
